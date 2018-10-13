@@ -48,7 +48,6 @@ p = Math.floor((h + r - 7 * m + 114)%31);
 
 console.log(`a=${a} b=${b} c=${c} d=${d} e=${e} f=${f} g=${g} h=${h} i=${i} k=${k} r=${r} m=${m} n=${n} p=${p}`)
 
-//Enter
 
 
 
