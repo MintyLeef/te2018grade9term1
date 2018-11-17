@@ -3,21 +3,27 @@ let player;
 
 
 //START
-console.log("*** WELCOME TO THE DUNGEON***");
+console.log("*** WELCOME TO THE DUNGEON ***");
 let startscreen = READLINE.question("START/EXIT:");
 if(startscreen == "START") {
   console.log("Starting Game...")
 }
  else{
       startscreen == "EXIT"
-          console.log("Sorry but you cannot leave. Starting Game...")
+          console.log("Come Back Again!")
         }
+
+if (startscreen == "START") {
+
 
 
 //CLASS SELECTION
 console.log("Choose Your Class: MAGE__SWORDSMAN__ARCHER")
  role = READLINE.question("What is your class?:");
- if(role == "MAGE"){
+ 
+
+//MAGE ROUTE
+if(role == "MAGE"){
   console.log(
   "Name = Arlen",
   "Courage(CRG) = 10",
@@ -28,7 +34,6 @@ console.log("Choose Your Class: MAGE__SWORDSMAN__ARCHER")
   )
 }
 
-//MAGE ROUTE
 if (role == "MAGE") {
   player = 
   name = "Arlen",
@@ -46,11 +51,11 @@ if(role == "MAGE"){
 //SWORDSMAN ROUTE
 if(role == "SWORDSMAN") {
 console.log("Name = Anton",
-  "Courage(CRG) = 18",
-  "Intellect(INT) = 13",
-  "Strength(STR) = 19",
-  "Magic(MAG) = 0",
-  "Weapon = Sword and Shield")
+  "| Courage(CRG) = 18 |",
+  "| Intellect(INT) = 13 |",
+  "| Strength(STR) = 19 |",
+  "| Magic(MAG) = 0 |",
+  "| Weapon = Sword and Shield |")
 }
 
 if (role == "SWORDSMAN") {
@@ -62,15 +67,21 @@ if (role == "SWORDSMAN") {
   weapon = "Sword and Shield"
 };
 
-let enterDungeon = READLINE.question("Will you enter dungeon? (yes or no) ");
-if(enterDungeon == "y" || enterHouse == "yes") {
-  console.log(`You prepare your ${player.weapon} and enter the maw of the dungeon...`);
-  // continue the story
+if (role == "SWORDSMAN") {
+  console.log("Anton is an orphaned child who was adopted by a farming family. His adopted parents told tales of his adventurous father and mother. He seeks to make a name for himself in the dungeon.")
+}
 
-} else {
+//DUNGEON ENTER
+
+let enterDungeon = READLINE.question("Will you enter dungeon? (yes or no) ");
+if(enterHouse == "yes") {
+  console.log(`You prepare your ${player.weapon} and enter the maw of the dungeon...`);
+
+} 
+else {
   player.intellect++;
-  console.log(`${player.name} decides not to open the door. However...`);
-  // continue the story
+  console.log(`You coward. Return when you've grown. Pathetic`);
 
 }
 console.log("Thanks for playing!");
+}
